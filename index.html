@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base target="_blank">
+<title>Metropolitan League — Brand Identity · The Dink</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#15233F;--navy-2:#1C3056;--navy-deep:#0C152B;--gold:#B58A3C;--gold-soft:#D8B262;--cream:#F4F1E8;--paper-2:#ECE7D8;
+  --ink:#15233F;--surface:#fff;--line:#E2DCCB;--mut:#6F7488;
+  --mn:#C2922F;--bk:#B5562F;--qn:#1E8A7A;--bx:#B23A48;--si:#2F7D5B;
+  --disp:'Space Grotesk',sans-serif;--body:'Hanken Grotesk',sans-serif;--mono:'Space Mono',monospace;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--gold)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.section{padding:74px 0}
+.section+.section{border-top:1px solid var(--line)}
+.kick{font-family:var(--mono);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:700;display:flex;align-items:center;gap:12px}
+.kick::before{content:"";width:28px;height:2px;background:var(--gold);display:inline-block}
+.ey{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--mut)}
+.h2{font-family:var(--disp);font-weight:700;font-size:clamp(1.8rem,4.4vw,2.8rem);letter-spacing:-.02em;text-transform:uppercase;margin:14px 0 10px;color:var(--ink)}
+.lede{color:var(--mut);max-width:64ch;font-size:1.06rem}
+
+/* cover */
+.cover{position:relative;overflow:hidden;color:var(--cream);background:radial-gradient(1000px 700px at 80% 4%,rgba(216,178,98,.25),transparent 55%),linear-gradient(165deg,#1C3056,#0C152B);padding:66px 0 74px}
+.cover::before{content:"";position:absolute;inset:0;opacity:.07;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:50px 50px;mask-image:radial-gradient(circle at 78% 32%,#000,transparent 66%)}
+.cover .wrap{position:relative;z-index:2}
+.cover .top{font-family:var(--mono);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:#d6c8a4;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.cover-grid{display:grid;grid-template-columns:1fr .82fr;gap:40px;align-items:center;margin-top:42px}
+.cover h1{font-family:var(--disp);font-weight:700;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1;letter-spacing:-.03em;text-transform:uppercase;margin:0}
+.cover h1 em{font-style:normal;color:var(--gold-soft)}
+.cover .sub{font-family:var(--mono);font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:#cfc7b0;margin-top:18px}
+.cover .tag{font-size:1.3rem;color:#ece6d6;margin-top:18px}
+.cover-emblem{display:flex;justify-content:center}
+.cover-emblem svg{width:min(300px,74vw);filter:drop-shadow(0 20px 38px rgba(0,0,0,.5))}
+
+/* generic */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{font-family:var(--disp);font-weight:700;font-size:1.05rem;color:var(--ink);margin:0 0 8px}
+.card p{color:var(--mut);font-size:.92rem;margin:0}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:30px;padding:5px 11px;color:var(--mut)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+
+/* logo */
+.stage{border-radius:18px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:34px;gap:14px;text-align:center}
+.stage.navy{background:var(--navy);border-color:var(--navy)}
+.stage.cream{background:var(--surface)}
+.stage .cap{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase}
+.stage.navy .cap{color:var(--gold-soft)} .stage.cream .cap{color:var(--mut)}
+.primary-stage{background:var(--navy);border-radius:20px;padding:50px;display:flex;justify-content:center}
+.primary-stage svg{width:min(260px,70vw)}
+.lockup{display:flex;align-items:center;gap:22px}
+.lockup svg{width:84px;height:84px;flex-shrink:0}
+.lockup .wm{font-family:var(--disp);font-weight:700;font-size:1.5rem;line-height:1;color:var(--cream);letter-spacing:-.01em;text-transform:uppercase;text-align:left}
+.lockup .wm small{display:block;font-family:var(--mono);font-size:.52rem;letter-spacing:.3em;color:var(--gold-soft);margin-top:7px;font-weight:400}
+.lockup.stk{flex-direction:column;gap:14px}
+.lockup.stk .wm{text-align:center}
+.lockrow{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.smallrow{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+.vars{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.vbox{border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:10px;background:var(--surface)}
+.vbox.navy{background:var(--navy);border-color:var(--navy)}
+.vbox svg{width:60px;height:60px}
+.vbox .c{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.vbox.navy .c{color:var(--gold-soft)}
+.rulegrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px}
+.clearbox{background:var(--surface);border:1px solid var(--line);border-radius:14px;display:flex;justify-content:center;padding:26px}
+.csz{position:relative;padding:34px}
+.csz::before{content:"";position:absolute;inset:0;border:2px dashed var(--gold);opacity:.55;border-radius:8px}
+.constr{background:var(--navy);border-radius:16px;padding:30px;display:flex;justify-content:center}
+.constr svg{width:min(280px,72vw)}
+.misuse{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.dont{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+.dont .b{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#B23A48;border-radius:20px;padding:3px 9px;display:inline-block;margin-bottom:12px}
+.dont .demo{height:60px;display:flex;align-items:center;justify-content:center}
+.dont p{font-size:.76rem;color:var(--mut);margin:10px 0 0}
+
+/* color */
+.pal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.sw{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.sw .c{height:96px;display:flex;align-items:flex-end;padding:12px;color:#fff;font-family:var(--disp);font-weight:700}
+.sw .m{padding:12px 14px;font-family:var(--mono);font-size:.66rem;color:var(--mut);line-height:1.6}
+.sw .m b{font-family:var(--disp);color:var(--ink);font-size:.92rem;display:block}
+.boro-cols{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-top:18px}
+.boro-cols div{height:72px;display:flex;align-items:flex-end;padding:8px;font-family:var(--mono);font-size:.54rem;color:#fff;font-weight:700}
+.a11y{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.ab{border-radius:12px;padding:18px;border:1px solid var(--line)}
+.ab .l{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+.ab .p{font-family:var(--disp);font-weight:700;font-size:1.05rem;margin-top:5px}
+
+/* type */
+.tg{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+.tc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.tc .r{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.tc .n{font-family:var(--disp);font-weight:700;font-size:1.2rem;margin:6px 0 10px;color:var(--ink)}
+.tc .s{font-family:var(--disp);font-weight:700;font-size:2.4rem;line-height:1;color:var(--ink)}
+.tc .sb{font-family:var(--body);font-size:1rem;color:var(--mut)}
+.tc .sm{font-family:var(--mono);font-size:1rem;color:var(--ink)}
+.scale{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px 22px}
+.scale div{display:flex;align-items:baseline;gap:18px;padding:11px 0;border-bottom:1px solid var(--line)}
+.scale div:last-child{border-bottom:none}
+.scale .z{font-family:var(--mono);font-size:.68rem;color:var(--mut);width:110px;flex-shrink:0}
+.scale .x{font-family:var(--disp);font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* boroughs */
+.boros{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px}
+.bo{background:var(--navy);border-radius:14px;padding:18px 8px 14px;text-align:center}
+.bo svg{width:62px;height:62px}
+.bo .bn{font-family:var(--disp);font-weight:700;font-size:.82rem;color:var(--cream);margin-top:8px}
+.bo .ba{font-family:var(--mono);font-size:.56rem;color:var(--gold-soft);letter-spacing:.1em}
+
+/* graphic language */
+.pattern{height:120px;border-radius:14px;overflow:hidden;border:1px solid var(--line);margin-top:18px;background:#15233F}
+.icons{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:18px}
+.ic{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center}
+.ic svg{width:40px;height:40px}
+.ic span{font-family:var(--mono);font-size:.58rem;color:var(--mut);letter-spacing:.04em}
+
+/* apps */
+.apps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.app{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.app .cv{height:184px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.app .cp{padding:12px 15px;border-top:1px solid var(--line)}
+.app .cp b{font-family:var(--disp);font-weight:700;font-size:.9rem;color:var(--ink)}
+.app .cp span{font-size:.78rem;color:var(--mut);display:block}
+
+/* voice */
+.voice{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+.vcol{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.vcol h4{font-family:var(--disp);font-weight:700;margin:0 0 10px;color:var(--ink)}
+.vl{list-style:none;padding:0;margin:0}
+.vl li{padding:7px 0;border-bottom:1px solid var(--line);font-size:.92rem;display:flex;gap:10px}
+.vl li:last-child{border-bottom:none}
+.tl{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.tlx{border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:16px 20px;background:var(--surface)}
+.tlx .t{font-family:var(--disp);font-weight:700;font-size:1.4rem;text-transform:uppercase;color:var(--ink);letter-spacing:-.01em}
+.tlx .r{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-top:6px}
+
+/* asset index */
+.assets{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.ai{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.ai h4{font-family:var(--disp);font-weight:700;font-size:.96rem;margin:0 0 6px;color:var(--ink)}
+.ai p{font-family:var(--mono);font-size:.66rem;color:var(--mut);margin:0;line-height:1.7}
+
+.foot{text-align:center;font-size:.72rem;color:var(--mut);padding:40px 20px;border-top:1px solid var(--line)}
+.foot a{color:var(--gold)}
+
+[data-animate]{opacity:0;transition:opacity .5s ease,transform .5s ease}
+[data-animate="fade-up"]{transform:translateY(18px)}
+[data-animate].is-visible{opacity:1;transform:none}
+.viz-menu{position:fixed;top:1rem;right:1rem;z-index:10000}
+.viz-menu-toggle{width:36px;height:36px;border-radius:8px;border:1px solid var(--line);background:#fff;color:#6F7488;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.viz-menu-panel{position:absolute;top:calc(100% + 6px);right:0;min-width:190px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:4px;box-shadow:0 8px 24px rgba(0,0,0,.18);opacity:0;transform:translateY(-4px);pointer-events:none;transition:.15s}
+.viz-menu.open .viz-menu-panel{opacity:1;transform:none;pointer-events:auto}
+.viz-menu-item{display:flex;gap:10px;width:100%;padding:8px 12px;border:none;border-radius:7px;background:transparent;color:#15233F;font-size:.84rem;cursor:pointer;text-align:left;font-family:inherit}
+.viz-menu-item:hover{background:var(--cream)}
+@media print{.viz-menu{display:none!important}[data-animate]{opacity:1!important;transform:none!important}}
+@media (prefers-reduced-motion:reduce){[data-animate]{opacity:1!important;transform:none!important}}
+@media (max-width:860px){.cover-grid,.rulegrid,.tg,.grid2,.lockrow,.smallrow{grid-template-columns:1fr}.vars,.misuse,.pal,.grid4,.a11y,.assets{grid-template-columns:1fr 1fr}.boros,.boro-cols,.icons{grid-template-columns:repeat(3,1fr)}.apps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="viz-menu" id="vizMenu"><button class="viz-menu-toggle" onclick="document.getElementById('vizMenu').classList.toggle('open')" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="5" x2="15" y2="5"/><line x1="3" y1="9" x2="15" y2="9"/><line x1="3" y1="13" x2="15" y2="13"/></svg></button><div class="viz-menu-panel"><button class="viz-menu-item" onclick="window.print()">⎙ Print / Save PDF</button></div></nav>
+
+<!-- ===== EMBLEM SYMBOLS ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E0BC6E"/><stop offset="1" stop-color="#9A7430"/></linearGradient>
+  <!-- standalone mark (recolorable) -->
+  <symbol id="d-mark" viewBox="0 0 140 140">
+    <line x1="38" y1="104" x2="102" y2="104" stroke="currentColor" stroke-width="2" opacity=".55"/>
+    <path d="M40 100 Q64 34 102 64" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round"/>
+    <circle cx="40" cy="100" r="4.5" fill="currentColor"/>
+    <circle cx="102" cy="64" r="10" fill="currentColor"/>
+  </symbol>
+  <!-- badge emblem (recolorable) -->
+  <symbol id="d-emblem" viewBox="0 0 140 140">
+    <circle cx="70" cy="70" r="66" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <circle cx="70" cy="70" r="58" fill="none" stroke="currentColor" stroke-width="1"/>
+    <line x1="46" y1="102" x2="94" y2="102" stroke="currentColor" stroke-width="1.6" opacity=".6"/>
+    <path d="M48 98 Q70 46 94 68" fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round"/>
+    <circle cx="48" cy="98" r="4" fill="currentColor"/>
+    <circle cx="94" cy="68" r="8.5" fill="currentColor"/>
+  </symbol>
+</defs></svg>
+
+<!-- COVER -->
+<header class="cover">
+  <div class="wrap">
+    <div class="top"><span>Metropolitan League · Brand Identity</span><span>The Dink · v1.0</span></div>
+    <div class="cover-grid">
+      <div>
+        <h1 data-animate="fade-up">The<br><em>Dink</em></h1>
+        <div class="sub" data-animate="fade-up" data-delay="80">Brand Identity &amp; Style Guide</div>
+        <p class="tag" data-animate="fade-up" data-delay="140">Touch over power. The game's defining shot — refined into a heraldic mark for New York's five-borough league.</p>
+      </div>
+      <div class="cover-emblem" data-animate="fade-up" data-delay="120">
+        <svg viewBox="0 0 160 160" role="img" aria-label="The Dink emblem">
+          <circle cx="80" cy="80" r="76" fill="#15233F"/>
+          <circle cx="80" cy="80" r="76" fill="none" stroke="url(#gold)" stroke-width="2.5"/>
+          <circle cx="80" cy="80" r="67" fill="none" stroke="url(#gold)" stroke-width="1"/>
+          <line x1="44" y1="120" x2="116" y2="120" stroke="url(#gold)" stroke-width="1.5" opacity=".6"/>
+          <path d="M46 116 Q74 40 116 74" fill="none" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="46" cy="116" r="4.5" fill="url(#gold)"/>
+          <circle cx="116" cy="74" r="11" fill="url(#gold)"/>
+          <g fill="#15233F"><circle cx="116" cy="70" r="1.8"/><circle cx="112" cy="75" r="1.8"/><circle cx="120" cy="75" r="1.8"/><circle cx="116" cy="79" r="1.8"/></g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 01 BRAND -->
+<section class="section"><div class="wrap">
+  <span class="ey">01 / BRAND STRATEGY</span>
+  <div class="kick" style="margin-top:10px">Positioning</div>
+  <h2 class="h2">The art of the soft game</h2>
+  <p class="lede">The Metropolitan League is New York's premier pickleball league — all five boroughs under one banner. The Dink identity is built on the sport's signature skill: the soft, surgical shot at the kitchen line. It's a brand for players who know that touch beats power — confident, precise, and a little bit cheeky, with the polish of a top-flight league.</p>
+  <div class="grid4" style="margin-top:24px">
+    <div class="card" data-animate="fade-up"><h3>Skillful</h3><p>Touch over power — the most refined shot in the game.</p></div>
+    <div class="card" data-animate="fade-up" data-delay="50"><h3>Precise</h3><p>Considered and exact, from the mark to the message.</p></div>
+    <div class="card" data-animate="fade-up" data-delay="100"><h3>Spirited</h3><p>Competitive and warm — serious game, good time.</p></div>
+    <div class="card" data-animate="fade-up" data-delay="150"><h3>Civic</h3><p>Five boroughs, one league, open to every player.</p></div>
+  </div>
+</div></section>
+
+<!-- 02 LOGO -->
+<section class="section"><div class="wrap">
+  <span class="ey">02 / LOGO SYSTEM</span>
+  <div class="kick" style="margin-top:10px">The Mark</div>
+  <h2 class="h2">The Dink emblem</h2>
+  <p class="lede">The primary mark is a roundel badge: a graceful dink trajectory arcing over the kitchen line to a perforated ball, framed by a fine double gold keyline. Refined, heraldic, and unmistakably pickleball.</p>
+
+  <div class="primary-stage" data-animate="fade-up" style="margin-top:24px">
+    <svg viewBox="0 0 160 160" role="img" aria-label="Primary emblem">
+      <circle cx="80" cy="80" r="76" fill="#15233F"/>
+      <circle cx="80" cy="80" r="76" fill="none" stroke="url(#gold)" stroke-width="2.5"/>
+      <circle cx="80" cy="80" r="67" fill="none" stroke="url(#gold)" stroke-width="1"/>
+      <line x1="44" y1="120" x2="116" y2="120" stroke="url(#gold)" stroke-width="1.5" opacity=".6"/>
+      <path d="M46 116 Q74 40 116 74" fill="none" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="46" cy="116" r="4.5" fill="url(#gold)"/>
+      <circle cx="116" cy="74" r="11" fill="url(#gold)"/>
+      <g fill="#15233F"><circle cx="116" cy="70" r="1.8"/><circle cx="112" cy="75" r="1.8"/><circle cx="120" cy="75" r="1.8"/><circle cx="116" cy="79" r="1.8"/></g>
+    </svg>
+  </div>
+
+  <div class="kick" style="margin-top:40px">Lockups</div>
+  <div class="lockrow">
+    <div class="stage navy" data-animate="fade-up"><div class="lockup"><svg viewBox="0 0 140 140"><use href="#d-emblem" style="color:#D8B262"/></svg><div class="wm">Metropolitan<br>League<small>NEW YORK · FIVE BOROUGHS</small></div></div><div class="cap">Horizontal Lockup</div></div>
+    <div class="stage navy" data-animate="fade-up" data-delay="80"><div class="lockup stk"><svg viewBox="0 0 140 140" style="width:78px"><use href="#d-emblem" style="color:#D8B262"/></svg><div class="wm">Metropolitan League<small>EST. 2026</small></div></div><div class="cap">Stacked Lockup</div></div>
+  </div>
+  <div class="smallrow">
+    <div class="stage cream" data-animate="fade-up"><svg viewBox="0 0 140 140" style="width:96px"><use href="#d-mark" style="color:#15233F"/></svg><div class="cap">Standalone Mark · app &amp; small use</div></div>
+    <div class="stage navy" data-animate="fade-up" data-delay="80"><svg viewBox="0 0 140 140" style="width:64px"><use href="#d-emblem" style="color:#D8B262"/></svg><div class="cap">Monogram Coin · favicon &amp; avatar</div></div>
+  </div>
+
+  <div class="kick" style="margin-top:40px">Color Variations</div>
+  <div class="vars">
+    <div class="vbox navy" data-animate="fade-up"><svg viewBox="0 0 140 140"><use href="#d-emblem" style="color:#D8B262"/></svg><div class="c">Gold on Navy · Primary</div></div>
+    <div class="vbox" data-animate="fade-up" data-delay="50"><svg viewBox="0 0 140 140"><use href="#d-emblem" style="color:#15233F"/></svg><div class="c">Navy on Cream</div></div>
+    <div class="vbox navy" data-animate="fade-up" data-delay="100"><svg viewBox="0 0 140 140"><use href="#d-emblem" style="color:#F4F1E8"/></svg><div class="c">Reversed · Cream</div></div>
+    <div class="vbox" data-animate="fade-up" data-delay="150"><svg viewBox="0 0 140 140"><use href="#d-emblem" style="color:#15233F"/></svg><div class="c">One-Color · Engrave / Foil</div></div>
+  </div>
+
+  <div class="kick" style="margin-top:40px">Construction &amp; Clear Space</div>
+  <div class="rulegrid">
+    <div class="constr" data-animate="fade-up">
+      <svg viewBox="0 0 160 160" aria-label="Construction grid">
+        <g stroke="#ffffff" stroke-opacity=".12" stroke-width="1"><line x1="0" y1="80" x2="160" y2="80"/><line x1="80" y1="0" x2="80" y2="160"/><circle cx="80" cy="80" r="76" fill="none"/><circle cx="80" cy="80" r="40" fill="none"/></g>
+        <circle cx="80" cy="80" r="76" fill="none" stroke="#D8B262" stroke-width="2"/>
+        <circle cx="80" cy="80" r="67" fill="none" stroke="#D8B262" stroke-width="1" opacity=".6"/>
+        <line x1="44" y1="120" x2="116" y2="120" stroke="#D8B262" stroke-width="1.5" opacity=".6"/>
+        <path d="M46 116 Q74 40 116 74" fill="none" stroke="#D8B262" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="46" cy="116" r="4.5" fill="#D8B262"/>
+        <circle cx="116" cy="74" r="11" fill="#D8B262"/>
+        <g stroke="#D8B26244" stroke-width="1"><circle cx="116" cy="74" r="20" fill="none"/><line x1="116" y1="40" x2="116" y2="108"/></g>
+      </svg>
+    </div>
+    <div class="card" data-animate="fade-up" data-delay="80"><h3>Clear space &amp; minimum size</h3><p>The emblem is built on a circular grid; the arc springs from the lower-left contact point to a ball one ball-diameter inside the keyline. Keep clear space equal to the ball's diameter on all sides, and never redraw it freehand — always place the master art.</p>
+      <div class="pills"><span class="pill">Digital min · 28px</span><span class="pill">Mark-only &lt; 24px</span><span class="pill">Print min · 0.35 in</span><span class="pill">Gold = foil where possible</span></div>
+    </div>
+  </div>
+
+  <div class="kick" style="margin-top:40px">Don'ts</div>
+  <div class="misuse">
+    <div class="dont" data-animate="fade-up"><span class="b">Don't</span><div class="demo"><svg viewBox="0 0 140 140" style="width:52px;transform:scaleY(.65)"><use href="#d-emblem" style="color:#15233F"/></svg></div><p>Don't distort or squash.</p></div>
+    <div class="dont" data-animate="fade-up" data-delay="50"><span class="b">Don't</span><div class="demo"><svg viewBox="0 0 140 140" style="width:52px"><use href="#d-emblem" style="color:#7E57C2"/></svg></div><p>Don't use off-palette colors.</p></div>
+    <div class="dont" data-animate="fade-up" data-delay="100"><span class="b">Don't</span><div class="demo"><svg viewBox="0 0 140 140" style="width:52px;transform:rotate(18deg)"><use href="#d-emblem" style="color:#15233F"/></svg></div><p>Don't rotate the emblem.</p></div>
+    <div class="dont" data-animate="fade-up" data-delay="150"><span class="b">Don't</span><div class="demo" style="background:repeating-linear-gradient(45deg,#ccc,#ccc 6px,#999 6px,#999 12px);border-radius:8px"><svg viewBox="0 0 140 140" style="width:48px"><use href="#d-emblem" style="color:#15233F"/></svg></div><p>Don't place on busy fields.</p></div>
+  </div>
+</div></section>
+
+<!-- 03 COLOR -->
+<section class="section"><div class="wrap">
+  <span class="ey">03 / COLOR</span>
+  <div class="kick" style="margin-top:10px">Palette</div>
+  <h2 class="h2">Navy &amp; dark gold</h2>
+  <p class="lede">League Navy carries the brand; Dark Gold is the single, precious accent — the arc and the ball. Each borough owns one fixed color so teams stay distinct while the city stays unified.</p>
+  <div class="pal">
+    <div class="sw" data-animate="fade-up"><div class="c" style="background:#15233F">Navy</div><div class="m"><b>League Navy</b>HEX #15233F · RGB 21 35 63 · PMS 533 C</div></div>
+    <div class="sw" data-animate="fade-up" data-delay="60"><div class="c" style="background:#B58A3C;color:#15233F">Gold</div><div class="m"><b>Dark Gold</b>HEX #B58A3C · RGB 181 138 60 · PMS 871 C</div></div>
+    <div class="sw" data-animate="fade-up" data-delay="120"><div class="c" style="background:#F4F1E8;color:#15233F">Cream</div><div class="m"><b>Gallery Cream</b>HEX #F4F1E8 · RGB 244 241 232 · PMS 7527 C</div></div>
+  </div>
+  <div class="kick" style="margin-top:34px">Borough accents</div>
+  <div class="boro-cols">
+    <div style="background:#C2922F;color:#15233F">MANHATTAN · #C2922F</div><div style="background:#B5562F">BROOKLYN · #B5562F</div><div style="background:#1E8A7A">QUEENS · #1E8A7A</div><div style="background:#B23A48">THE BRONX · #B23A48</div><div style="background:#2F7D5B">STATEN IS. · #2F7D5B</div>
+  </div>
+  <div class="kick" style="margin-top:34px">Accessibility</div>
+  <div class="a11y">
+    <div class="ab" style="background:#15233F;color:#F4F1E8" data-animate="fade-up"><div class="l">Cream on Navy</div><div class="p">AAA · 13.9:1</div></div>
+    <div class="ab" style="background:#B58A3C;color:#15233F" data-animate="fade-up" data-delay="60"><div class="l">Navy on Gold</div><div class="p">AA · 6.1:1</div></div>
+    <div class="ab" style="background:#F4F1E8;color:#15233F" data-animate="fade-up" data-delay="120"><div class="l">Navy on Cream</div><div class="p">AAA · 14.6:1</div></div>
+  </div>
+</div></section>
+
+<!-- 04 TYPE -->
+<section class="section"><div class="wrap">
+  <span class="ey">04 / TYPOGRAPHY</span>
+  <div class="kick" style="margin-top:10px">Type System</div>
+  <h2 class="h2">Space Grotesk &amp; Hanken</h2>
+  <p class="lede">A modern, precise system to match the mark: geometric display, humanist body, monospaced data. All free on Google Fonts — zero licensing cost.</p>
+  <div class="tg">
+    <div class="tc" data-animate="fade-up"><div class="r">Display · Headlines</div><div class="n">Space Grotesk</div><div class="s">DINK CITY</div></div>
+    <div class="tc" data-animate="fade-up" data-delay="60"><div class="r">Body · Reading</div><div class="n">Hanken Grotesk</div><p class="sb">The Metropolitan League spans all five boroughs across spring and fall seasons — the city's game, played citywide.</p></div>
+    <div class="tc" data-animate="fade-up"><div class="r">Data · Labels</div><div class="n">Space Mono</div><div class="sm">EST. 2026 · W11–L7 · SEED #1</div></div>
+    <div class="tc" data-animate="fade-up" data-delay="60"><div class="r">Numerals · Kit</div><div class="n">Space Grotesk · 700</div><div class="s">07 · 11</div></div>
+  </div>
+  <div class="scale">
+    <div><span class="z">Display / 56px</span><span class="x" style="font-size:2.3rem">METROPOLITAN</span></div>
+    <div><span class="z">H2 / 28px</span><span class="x" style="font-size:1.4rem">Five boroughs, one league</span></div>
+    <div><span class="z">Body / 16px</span><span class="x" style="font-family:var(--body);font-weight:400;font-size:1rem">Standings update every Sunday at noon.</span></div>
+    <div><span class="z">Caption / 12px</span><span class="x" style="font-family:var(--mono);font-size:.75rem">SAT 06.27 · 9:00 AM · BROOKLYN</span></div>
+  </div>
+</div></section>
+
+<!-- 05 BOROUGHS -->
+<section class="section"><div class="wrap">
+  <span class="ey">05 / THE FIVE BOROUGHS</span>
+  <div class="kick" style="margin-top:10px">Team Identities</div>
+  <h2 class="h2">One emblem, five colors</h2>
+  <p class="lede">Each borough fields the Dink emblem in its own accent — instantly a family, instantly distinct. Set the borough name beneath for the full team lockup.</p>
+  <div class="boros">
+    <div class="bo" data-animate="fade-up"><svg viewBox="0 0 140 140"><use href="#d-emblem" style="color:#C2922F"/></svg><div class="bn">Manhattan</div><div class="ba">MN</div></div>
+    <div class="bo" data-animate="fade-up" data-delay="40"><svg viewBox="0 0 140 140"><use href="#d-emblem" style="color:#B5562F"/></svg><div class="bn">Brooklyn</div><div class="ba">BK</div></div>
+    <div class="bo" data-animate="fade-up" data-delay="80"><svg viewBox="0 0 140 140"><use href="#d-emblem" style="color:#1E8A7A"/></svg><div class="bn">Queens</div><div class="ba">QN</div></div>
+    <div class="bo" data-animate="fade-up" data-delay="120"><svg viewBox="0 0 140 140"><use href="#d-emblem" style="color:#B23A48"/></svg><div class="bn">The Bronx</div><div class="ba">BX</div></div>
+    <div class="bo" data-animate="fade-up" data-delay="160"><svg viewBox="0 0 140 140"><use href="#d-emblem" style="color:#2F7D5B"/></svg><div class="bn">Staten Island</div><div class="ba">SI</div></div>
+  </div>
+</div></section>
+
+<!-- 06 GRAPHIC LANGUAGE -->
+<section class="section"><div class="wrap">
+  <span class="ey">06 / GRAPHIC LANGUAGE</span>
+  <div class="kick" style="margin-top:10px">Supporting Elements</div>
+  <h2 class="h2">The arc &amp; the line</h2>
+  <p class="lede">The dink trajectory and the kitchen line are the brand's signature graphic devices — used as a repeating motion pattern on dark surfaces and a baseline rule in layouts. A small monoline icon set carries the same geometry.</p>
+  <div class="pattern" data-animate="fade-up">
+    <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 600 120">
+      <rect width="600" height="120" fill="#15233F"/>
+      <g fill="none" stroke="#B58A3C" stroke-width="2.5" stroke-linecap="round" opacity=".7">
+        <path d="M20 96 Q60 32 110 60"/><path d="M120 96 Q160 32 210 60"/><path d="M220 96 Q260 32 310 60"/><path d="M320 96 Q360 32 410 60"/><path d="M420 96 Q460 32 510 60"/><path d="M520 96 Q560 32 610 60"/>
+      </g>
+      <g fill="#D8B262"><circle cx="110" cy="60" r="5"/><circle cx="210" cy="60" r="5"/><circle cx="310" cy="60" r="5"/><circle cx="410" cy="60" r="5"/><circle cx="510" cy="60" r="5"/></g>
+      <line x1="0" y1="104" x2="600" y2="104" stroke="#B58A3C" stroke-width="1" opacity=".5"/>
+    </svg>
+  </div>
+  <div class="icons">
+    <div class="ic" data-animate="fade-up"><svg viewBox="0 0 48 48" fill="none" stroke="#B58A3C" stroke-width="3" stroke-linecap="round"><path d="M8 38 Q24 6 40 22"/><circle cx="40" cy="22" r="3.5" fill="#B58A3C" stroke="none"/></svg><span>Dink</span></div>
+    <div class="ic" data-animate="fade-up" data-delay="40"><svg viewBox="0 0 48 48" fill="none" stroke="#B58A3C" stroke-width="3" stroke-linecap="round"><circle cx="24" cy="20" r="12"/><circle cx="20" cy="16" r="1.5" fill="#B58A3C" stroke="none"/><circle cx="28" cy="16" r="1.5" fill="#B58A3C" stroke="none"/><circle cx="24" cy="23" r="1.5" fill="#B58A3C" stroke="none"/><line x1="24" y1="32" x2="24" y2="42"/></svg><span>Ball</span></div>
+    <div class="ic" data-animate="fade-up" data-delay="80"><svg viewBox="0 0 48 48" fill="none" stroke="#B58A3C" stroke-width="3" stroke-linecap="round"><ellipse cx="20" cy="18" rx="11" ry="14"/><line x1="28" y1="28" x2="40" y2="40"/></svg><span>Paddle</span></div>
+    <div class="ic" data-animate="fade-up" data-delay="120"><svg viewBox="0 0 48 48" fill="none" stroke="#B58A3C" stroke-width="3" stroke-linecap="round"><rect x="10" y="8" width="28" height="32" rx="2"/><line x1="10" y1="24" x2="38" y2="24"/><rect x="17" y="19" width="14" height="10"/></svg><span>Kitchen</span></div>
+    <div class="ic" data-animate="fade-up" data-delay="160"><svg viewBox="0 0 48 48" fill="none" stroke="#B58A3C" stroke-width="3" stroke-linecap="round"><path d="M24 6 L29 18 L42 19 L32 28 L35 41 L24 34 L13 41 L16 28 L6 19 L19 18 Z"/></svg><span>Champion</span></div>
+  </div>
+</div></section>
+
+<!-- 07 APPLICATIONS -->
+<section class="section"><div class="wrap">
+  <span class="ey">07 / APPLICATIONS</span>
+  <div class="kick" style="margin-top:10px">In the World</div>
+  <h2 class="h2">The kit</h2>
+  <div class="apps">
+    <div class="app" data-animate="fade-up"><div class="cv" style="background:#B5562F"><svg viewBox="0 0 160 180" style="width:55%"><path d="M50 18 L65 10 a22 14 0 0 0 30 0 L110 18 L140 40 L126 62 L116 54 L116 168 a4 4 0 0 1-4 4 L48 172 a4 4 0 0 1-4-4 L44 54 L34 62 L20 40 Z" fill="#15233F"/><use href="#d-emblem" x="44" y="38" width="72" height="72" style="color:#D8B262"/><text x="80" y="152" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="34" fill="#D8B262">07</text></svg></div><div class="cp"><b>Brooklyn Kit</b><span>Borough body, gold emblem.</span></div></div>
+    <div class="app" data-animate="fade-up" data-delay="50"><div class="cv" style="background:#0C152B"><svg viewBox="0 0 300 150" style="width:90%"><rect width="300" height="150" fill="#15233F"/><use href="#d-emblem" x="16" y="33" width="84" height="84" style="color:#D8B262"/><text x="112" y="66" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#F4F1E8">Metropolitan</text><text x="112" y="92" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#D8B262">League</text><text x="114" y="112" font-family="Space Mono, monospace" font-size="8.5" letter-spacing="3" fill="#D8B262">FIVE BOROUGHS · ONE CITY</text></svg></div><div class="cp"><b>Court Banner</b><span>Fence mesh, weatherproof.</span></div></div>
+    <div class="app" data-animate="fade-up" data-delay="100"><div class="cv" style="background:#B58A3C"><svg viewBox="0 0 200 200" style="width:74%"><rect width="200" height="200" fill="#B58A3C"/><use href="#d-mark" x="56" y="18" width="88" height="88" style="color:#15233F"/><text x="100" y="138" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="20" fill="#15233F">MATCH DAY</text><text x="100" y="160" text-anchor="middle" font-family="Space Mono, monospace" font-size="9.5" letter-spacing="2" fill="#15233F">SAT 06.27 · 9AM</text></svg></div><div class="cp"><b>Social Tile</b><span>Square, story &amp; banner.</span></div></div>
+    <div class="app" data-animate="fade-up"><div class="cv" style="background:linear-gradient(135deg,#1C3056,#15233F)"><svg viewBox="0 0 280 170" style="width:86%"><rect width="280" height="170" rx="14" fill="#15233F"/><use href="#d-emblem" x="14" y="16" width="60" height="60" style="color:#D8B262"/><text x="82" y="40" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="#F4F1E8">METROPOLITAN LEAGUE</text><text x="82" y="56" font-family="Space Mono, monospace" font-size="8" letter-spacing="3" fill="#D8B262">MEMBER · 2026</text><text x="20" y="128" font-family="Space Mono, monospace" font-size="11" letter-spacing="2" fill="#F4F1E8">3142 0078 2026 0001</text><text x="20" y="150" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="12" fill="#D8B262">A. RIVERA · BROOKLYN</text></svg></div><div class="cp"><b>Membership Card</b><span>Season access &amp; identity.</span></div></div>
+    <div class="app" data-animate="fade-up" data-delay="50"><div class="cv" style="background:#ECE7D8"><svg viewBox="0 0 160 180" style="width:60%"><path d="M44 40 q0-26 16-26 M100 40 q0-26 -16-26" fill="none" stroke="#15233F" stroke-width="5"/><rect x="24" y="40" width="112" height="128" rx="4" fill="#F4F1E8" stroke="#15233F" stroke-width="2"/><use href="#d-mark" x="52" y="58" width="56" height="56" style="color:#15233F"/><text x="80" y="142" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="13" fill="#15233F">METRO LEAGUE</text></svg></div><div class="cp"><b>Canvas Tote</b><span>One-color navy print.</span></div></div>
+    <div class="app" data-animate="fade-up" data-delay="100"><div class="cv" style="background:#ECE7D8"><svg viewBox="0 0 180 160" style="width:74%"><use href="#d-emblem" x="14" y="26" width="60" height="60" style="color:#C2922F"/><use href="#d-emblem" x="86" y="26" width="60" height="60" style="color:#1E8A7A"/><use href="#d-emblem" x="50" y="86" width="60" height="60" style="color:#B23A48"/><use href="#d-emblem" x="122" y="26" width="60" height="60" style="color:#B5562F"/><use href="#d-emblem" x="-4" y="86" width="60" height="60" style="color:#2F7D5B"/></svg></div><div class="cp"><b>Enamel Pin Set</b><span>Collect all five boroughs.</span></div></div>
+  </div>
+</div></section>
+
+<!-- 08 VOICE -->
+<section class="section"><div class="wrap">
+  <span class="ey">08 / VOICE &amp; MESSAGING</span>
+  <div class="kick" style="margin-top:10px">Tone</div>
+  <h2 class="h2">Playful &amp; precise</h2>
+  <div class="voice">
+    <div class="vcol" data-animate="fade-up"><h4>We do</h4><ul class="vl"><li>✓ Lead with the borough and the rivalry.</li><li>✓ Keep it short, sharp, scoreboard-brief.</li><li>✓ Use light wit and real talk.</li><li>✓ Welcome every level — beginner to ringer.</li></ul></div>
+    <div class="vcol" data-animate="fade-up" data-delay="80"><h4>We don't</h4><ul class="vl"><li>✕ Sound corporate or country-club.</li><li>✕ Over-explain the rules in marketing.</li><li>✕ Use jargon that locks newcomers out.</li><li>✕ Crowd the emblem or break the palette.</li></ul></div>
+  </div>
+  <div class="tl">
+    <div class="tlx" data-animate="fade-up"><div class="t">Touch beats power.</div><div class="r">Primary</div></div>
+    <div class="tlx" data-animate="fade-up" data-delay="50"><div class="t">Win at the kitchen line.</div><div class="r">Secondary</div></div>
+    <div class="tlx" data-animate="fade-up" data-delay="100"><div class="t">Five boroughs. One soft game.</div><div class="r">Playful · social &amp; merch</div></div>
+  </div>
+</div></section>
+
+<!-- 09 ASSET INDEX -->
+<section class="section"><div class="wrap">
+  <span class="ey">09 / HANDOFF</span>
+  <div class="kick" style="margin-top:10px">Asset Index</div>
+  <h2 class="h2">What ships</h2>
+  <div class="assets">
+    <div class="ai" data-animate="fade-up"><h4>Logo files</h4><p>Emblem · standalone mark · monogram coin<br>Horizontal &amp; stacked lockups<br>SVG · PNG · 1-color EPS · gold-foil spec</p></div>
+    <div class="ai" data-animate="fade-up" data-delay="50"><h4>Borough set</h4><p>5 emblems + lockups in borough colors<br>SVG · PNG · embroidery digitization</p></div>
+    <div class="ai" data-animate="fade-up" data-delay="100"><h4>Color &amp; type</h4><p>Swatch library (HEX/RGB/CMYK/PMS)<br>Google Fonts: Space Grotesk · Hanken · Space Mono</p></div>
+    <div class="ai" data-animate="fade-up" data-delay="150"><h4>Templates</h4><p>Matchup · standings · roster<br>Square / story / banner social sizes</p></div>
+    <div class="ai" data-animate="fade-up" data-delay="200"><h4>Graphic kit</h4><p>Arc pattern · kitchen-line rule · icon set</p></div>
+    <div class="ai" data-animate="fade-up" data-delay="250"><h4>Applications</h4><p>Kit · court wrap · banner · membership · tote · pins</p></div>
+  </div>
+</div></section>
+
+<footer class="foot">Metropolitan League · Brand Identity — The Dink · v1.0 · Hub Uy · June 2026<br>Generated by <a href="https://fburl.com/claude-templates/k5rd6ab0">/visualize</a> claude skill</footer>
+
+<script>
+(function(){var ob=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){var el=en.target,d=parseInt(el.getAttribute('data-delay')||'0',10);setTimeout(function(){el.classList.add('is-visible')},d);ob.unobserve(el)}})},{threshold:.12});document.querySelectorAll('[data-animate]').forEach(function(el){ob.observe(el)});})();
+document.addEventListener('click',function(e){var m=document.getElementById('vizMenu');if(m&&!m.contains(e.target))m.classList.remove('open')});
+</script>
+</body>
+</html>
